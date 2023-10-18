@@ -14,15 +14,21 @@ import Search from './views/Search/Search';
 import AllStory from './views/AllStory/AllStory';
 import 'react-loading-skeleton/dist/skeleton.css'
 import './scss/App.scss';
+import Payment from './views/Payment/Payment';
+import ResultPayment from './views/ResultPayment/ResultPayment';
+
 function App() {
   return (
     <HashRouter>
       <Header />
       <Routes>
         <Route path='/' element={<Home />}/>
+        <Route path="/payment" element={<Payment/>} />
+
         <Route path='truyen/:url' element={<StoryDetail />}/>
         <Route element={<PrivateRoute roles={['USER']} />}>
           <Route path='/user/*' element={<Account />}/>
+          
         </Route>
         <Route element={<PrivateRoute roles={['ADMIN']} />}>
           <Route path='admin/*' element={<Admin />}/>
@@ -30,8 +36,11 @@ function App() {
         <Route path='active/:token' element={<Active />}/>
         <Route path='truyen/:url/:chapnum' element={<Chapter />}/>
         <Route path='tim-kiem' element={<Search/>}/>
+       
         <Route path='tat-ca' element={<AllStory/>}/>
+       
       </Routes>
+      
       <Footer/>
       <ToastContainer autoClose={1000}
         hideProgressBar

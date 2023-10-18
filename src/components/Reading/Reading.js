@@ -7,12 +7,12 @@ function Reading(props) {
   return (
     <div className="reading-card">
       <div className="reading-card__img-wrap">
-        {data.hinhanh ? <img src={data.hinhanh} alt="" /> : <Skeleton width={32} height={43}/>}
+        {data.Images ? <img src={data.Images} alt="" /> : <Skeleton width={32} height={43}/>}
       </div>
       <div className="reading-card__content">
         {
-          data.tentruyen?<Link to={`/truyen/${data?.url}`} className="reading-card__title fs-15">
-          {data.tentruyen}
+          data.Name?<Link to={`/Novel/${data?.url}`} className="reading-card__title fs-15">
+          {data.Name}
         </Link> :<Skeleton />
         }
         

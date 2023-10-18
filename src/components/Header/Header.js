@@ -9,6 +9,11 @@ import { authLoginActive, authRegisterActive, authInactive } from '../../redux/m
 import { handleLogout } from '../../handle/handleAuth';
 import { setQuery } from '../../redux/messageSlice';
 import './Header.scss';
+import Payment from '../../views/Payment/Payment';
+function numWithCommas(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 
 const menu = {
   // menu hiển thị cho từng loại tài khoản admin và user thường
@@ -178,12 +183,12 @@ export default function Header() {
                   Browse
                 </Link>
                 </li>
-              <li className="text-bold navbar-expand__item">
+              {/* {<li className="text-bold navbar-expand__item">
                 <Link to="/truyen">
                   <i className="bx bxs-bar-chart-alt-2"></i>
                   Bảng xếp hạng
                 </Link>
-              </li>
+              </li>} */}
               {user ? (
                 <>
                   {menu[user?.roles[0] || 'USER'].map((item, i) => (
@@ -250,9 +255,9 @@ export default function Header() {
                 </div>
 
               </li>
-              <li className="text-bold">
+              {/* <li className="text-bold">
                 <Link to="/truyen">Ranking</Link>
-              </li>
+              </li> */}
             </ul>
             <div className="navbar__list__search">
               <div className="form-group">
@@ -268,6 +273,10 @@ export default function Header() {
                   <i style={{ marginRight: '4px' }} className="bx bx-up-arrow-circle fs-28"></i> Create
                 </Link>
               </li>
+              <li><Link to={'/payment'}
+                                className='text-with-icon'>
+                                <i style={{ marginRight: '4px' }} className="bx bx-up-arrow-circle fs-28"></i> Nạp tiền
+                            </Link></li>
               {user ? (
                 <li ref={profileDropdownRef} className="navbar__profile">
                   <div>
@@ -283,6 +292,8 @@ export default function Header() {
                     </div>
                     <div tabIndex={'1'} onBlur={hideProfileDropdown} className="navbar__profile__menu">
                       <ul>
+                      <li><Link to={'/payment'}>Số dư: {numWithCommas(user?.balance || 0)}<i className='bx bxs-coin-stack'></i></Link></li>
+
                         {menu[user?.roles[0] || 'USER'].map((item, i) => {
                           return (
                             <li key={i}>

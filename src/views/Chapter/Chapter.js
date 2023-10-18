@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import apiMain from '../../api/apiMain'
+import apiStory from '../../api/apiStory'
+
 import getData from '../../api/getData'
 import { Link } from 'react-router-dom'
 import { loginSuccess } from '../../redux/authSlice'

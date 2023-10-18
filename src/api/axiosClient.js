@@ -8,7 +8,8 @@ import { logoutSuccess } from '../redux/authSlice';
 //const baseURL='https://thichtruyenchu.herokuapp.com/api'
 //const baseURL = 'http://localhost:8080/api'
 //const baseURL = 'http://localhost:5000/api'
-const baseURL = 'https://benovel.herokuapp.com/api'
+//const baseURL = 'https://webnovelapi.azurewebsites.net/api'
+const baseURL = 'https://becnpmm.vercel.app/api'
 export const axiosClient = axios.create({
     baseURL: baseURL,
 

@@ -72,6 +72,8 @@ function Account() {
         <Route path='change-password' element={<ChangePassword />}></Route>
         <Route path='tu-truyen/*' element={<TuTruyen userInfo={userInfo} />}></Route>
         <Route path='dang-truyen' element={<CreateNovel userInfo={userInfo} />}></Route>
+        {/* <Route path='thanh-toan' element={<ListBill />}></Route> */}
+
       </Routes>
     </Panel>
 
