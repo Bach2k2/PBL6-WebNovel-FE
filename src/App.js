@@ -23,11 +23,12 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path="/payment" element={<Payment/>} />
+       
 
         <Route path='truyen/:url' element={<StoryDetail />}/>
         <Route element={<PrivateRoute roles={['USER']} />}>
           <Route path='/user/*' element={<Account />}/>
+          <Route path="/user/payment" element={<Payment/>} />
           
         </Route>
         <Route element={<PrivateRoute roles={['ADMIN']} />}>

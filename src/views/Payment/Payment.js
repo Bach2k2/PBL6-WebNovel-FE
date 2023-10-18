@@ -4,7 +4,7 @@ import React, { Fragment } from "react";
 import Layout from '../../components/Layout/Layout';
 import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
-import { numWithCommas } from '../../utils/convertNumber'
+import { numWithCommas } from '../../utils/convertNumber';
 import { useSelector } from "react-redux";
 
 const data = [
@@ -31,7 +31,13 @@ const data = [
 ];
 
 const Payment = () => {
-  const user = useSelector((state) => state.user.info);
+  //.info
+  const user = useSelector((state) => state.user);
+  console.log(user);
+  // const user= {
+  //   username:'Bach',
+  //   password:'password'
+  // }
 
   const redirectMomo = (amount) => {
     makePaymentMomo({ orderId: uuidv4(), amount, username: user.username }).then((result) => {

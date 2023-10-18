@@ -273,7 +273,7 @@ export default function Header() {
                   <i style={{ marginRight: '4px' }} className="bx bx-up-arrow-circle fs-28"></i> Create
                 </Link>
               </li>
-              <li><Link to={'/payment'}
+              <li><Link to={'/user/payment'}
                                 className='text-with-icon'>
                                 <i style={{ marginRight: '4px' }} className="bx bx-up-arrow-circle fs-28"></i> Nạp tiền
                             </Link></li>
@@ -292,7 +292,7 @@ export default function Header() {
                     </div>
                     <div tabIndex={'1'} onBlur={hideProfileDropdown} className="navbar__profile__menu">
                       <ul>
-                      <li><Link to={'/payment'}>Số dư: {numWithCommas(user?.balance || 0)}<i className='bx bxs-coin-stack'></i></Link></li>
+                      <li><Link to={'/user/payment'}>Số dư: {numWithCommas(user?.balance || 0)}<i className='bx bxs-coin-stack'></i></Link></li>
 
                         {menu[user?.roles[0] || 'USER'].map((item, i) => {
                           return (
