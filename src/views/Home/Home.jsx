@@ -13,12 +13,8 @@ function Home() {
              <NewestChapter key={"list2"}/>
             <StoryTopRate key={"list3"}/>
       </div>
-      
-    </Layout>
-    
-           
-    </>
-    
+    </Layout>           
+    </>   
   )
 }
 

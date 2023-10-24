@@ -36,9 +36,8 @@ const apiMain = {
     ///get data
 
     getStorys: async (params) => {
-        const res = await axiosClient.get(`/novels/`, { params: params });
+        const res = await axiosClient.get(`/Novel/`, { params: params });  // old novels to /Novel
         return getData(res);
-
     },
     getStorysByName: async (params) => {
         const res = await axiosClient.get(`/novels/search`, { params: params });
@@ -91,7 +90,7 @@ const apiMain = {
         let axi = axiosInstance(user, dispatch, stateSuccess)
         return getData(await axi.get(url, { headers: { Authorization: `Bearer ${user.accessToken}` } }));
     },
-    getReadingDefault: async (params) => {
+    getReadingDefault: async (params) => {  // Hàm này gọi API hiển thị ds truyện đang đọc dở, My Library.
         const url = `/novels/readingsdefault`
         return getData(await axiosClient.get(url, {params} ));
     },

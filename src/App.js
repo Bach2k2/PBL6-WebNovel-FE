@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
        
-
+{/* 
         <Route path='truyen/:url' element={<StoryDetail />}/>
         <Route element={<PrivateRoute roles={['USER']} />}>
           <Route path='/user/*' element={<Account />}/>
@@ -38,7 +38,7 @@ function App() {
         <Route path='truyen/:url/:chapnum' element={<Chapter />}/>
         <Route path='tim-kiem' element={<Search/>}/>
        
-        <Route path='tat-ca' element={<AllStory/>}/>
+        <Route path='tat-ca' element={<AllStory/>}/> */}
        
       </Routes>
       
