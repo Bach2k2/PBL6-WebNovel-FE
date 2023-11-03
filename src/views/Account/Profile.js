@@ -109,8 +109,8 @@ function Profile({userInfo,changeUserInfo}) {
   return (
     <>
       {
-        loadingUser ? <LoadingData />
-          :
+        // loadingUser ? <LoadingData />
+        //   :
           <div className="profile__wrap row">
             <div className="col-5 col-md-12 col-sm-12 profile__avt">
               <img src={preview} alt="" />

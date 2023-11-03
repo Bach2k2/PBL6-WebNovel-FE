@@ -24,21 +24,21 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
        
-{/* 
+
         <Route path='truyen/:url' element={<StoryDetail />}/>
-        <Route element={<PrivateRoute roles={['USER']} />}>
+        <Route >
           <Route path='/user/*' element={<Account />}/>
           <Route path="/user/payment" element={<Payment/>} />
           
         </Route>
-        <Route element={<PrivateRoute roles={['ADMIN']} />}>
+        <Route >
           <Route path='admin/*' element={<Admin />}/>
         </Route>
         <Route path='active/:token' element={<Active />}/>
         <Route path='truyen/:url/:chapnum' element={<Chapter />}/>
         <Route path='tim-kiem' element={<Search/>}/>
        
-        <Route path='tat-ca' element={<AllStory/>}/> */}
+        <Route path='tat-ca' element={<AllStory/>}/>
        
       </Routes>
       

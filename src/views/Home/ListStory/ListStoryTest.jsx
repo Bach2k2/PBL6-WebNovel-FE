@@ -11,10 +11,9 @@ export function ListStoryTest() {
         const getStory = async () => {//xử lý gọi hàm load truyện
             try{
                 const res = await getNovelList();
-                // console.log(res);
+                console.log(res);
                 setData(res);
-                setReadings(readings);
-                console.log(datas);
+                setReadings(res);
             }catch (error){
                 console.error('Lỗi khi lấy dữ liệu:', error);
             }

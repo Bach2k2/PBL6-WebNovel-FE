@@ -9,15 +9,15 @@ import { logoutSuccess } from '../redux/authSlice';
 //const baseURL = 'http://localhost:8080/api'
 //const baseURL = 'http://localhost:5000/api'
 //const baseURL = 'https://webnovelapi.azurewebsites.net/api'
-// const baseURL = 'https://becnpmm.vercel.app/api'
-const baseURL = 'https://webnovelapi.azurewebsites.net/';
+const baseURL = 'https://becnpmm.vercel.app/api'
+// const baseURL = 'https://webnovelapi.azurewebsites.net/';
 export const axiosClient = axios.create({
     baseURL: baseURL,
 
     headers: {
         "Content-Type": "application/json"
     },
-    withCredentials: true,
+    withCredentials: false,
     paramsSerializer: (params) => queryString.stringify(params)
 });
 
